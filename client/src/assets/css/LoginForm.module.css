@@ -1,0 +1,63 @@
+.form {
+    background-color: rgb(60, 135, 221);
+    width: 500px;
+    height: 600px;
+
+    border-radius: 15px;
+}
+
+.formHeader {
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 12%;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.formContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 88%;
+}
+
+.inputsArea {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 70%;
+}
+
+.inputsArea .inputField {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    width: 90%;
+    height: 120px;
+    gap: 8px;
+    text-indent: 5px;
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+.inputField input {
+    height: 60px;
+    width: 100%;
+    border-radius: 15px;
+    outline: none;
+    border: none;
+}
+
+.sendButtonArea {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30%;
+    width: 100%;
+}
