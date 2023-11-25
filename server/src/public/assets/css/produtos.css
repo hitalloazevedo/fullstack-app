@@ -1,0 +1,83 @@
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+table {
+    background-color: azure;
+    min-width: 750px;
+    width: 900px;
+    height: 500px;
+    display: block;
+    border-collapse: collapse;
+    overflow: scroll;
+}
+ 
+[data-title]{
+    width: 700px;
+}
+
+td {
+    border: 1px solid black;
+    padding: 7px;
+    box-sizing: border-box;
+}
+
+.title {
+    font-weight: 600;
+}
+
+#td-cod, td[data-cod] {
+    width: 100px;
+    text-align: center;
+}
+
+#td-des, td[data-description]{
+    width: 500px;
+} 
+
+#td-siz, td[data-size]{
+    width: 140px;
+}
+
+#td-action, td[data-control] {
+    width: 140px;
+}
+
+table tr {
+    height: 40px; 
+}
+
+ul.tabela__botoes-controle {
+    display: flex;
+    list-style: none;
+    gap: 5px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.botao-simples {
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 5px;
+    padding: 3px;
+    transition: .5s;
+}
+
+.botao-simples--editar {
+    text-decoration: none;
+    background-color: rgb(104, 173, 238);
+}
+
+.botao-simples--editar:hover {
+    background-color: rgb(48, 139, 224);
+}
+
+.botao-simples--excluir {
+    background-color: rgb(250, 156, 128);
+    border: none;
+}
+.botao-simples--excluir:hover {
+    background-color: rgb(245, 124, 88);
+}

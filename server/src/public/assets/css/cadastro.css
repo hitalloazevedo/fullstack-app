@@ -1,0 +1,64 @@
+
+form {
+    background-color: rgba(98, 151, 93, 0.836);
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.548);
+    margin: auto;
+    height: 500px;
+    width: 400px;
+    border-radius: 15px;
+    padding: 30px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+form h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    color: rgb(247, 247, 247);
+}
+
+.input-field {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 70%;
+    margin: auto;
+    gap: 10px;
+}
+
+.input-field label{
+    font-size: 1.2rem;
+    color: aliceblue;
+}
+
+.input-field input{
+    height: 40px;
+    font-size: 1.5rem;
+    padding: 0px 5px;
+    border-radius: 10px;
+    border-style: none;
+    outline: none;
+}
+
+.button-field {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+}
+
+.button-field input {
+    height: 50px;
+    font-size: 1.5rem;
+    background-color: rgb(54, 87, 54);
+    color: aliceblue;
+    border-radius: 10px;
+    border-style: none;
+    outline: none;
+    transition: background-color .7s;
+}
+
+.button-field input:hover {
+    background-color: rgb(76, 100, 76);
+}

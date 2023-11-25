@@ -1,0 +1,48 @@
+body {
+    background-color: rgb(207, 207, 207);
+}
+
+main {
+    background-color: rgba(18, 128, 218, 0.623);
+    width: 600px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: auto;
+    transform: translateY(40%);
+
+    border-radius: 15px;
+    padding: 10px;
+    box-sizing: border-box;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.39);
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    height: 80%;
+}
+
+h2 {
+    height: 20%;
+    font-size: 2rem;
+    color: rgb(245, 245, 245);
+}
+
+a {
+    background-color: rgb(216, 199, 102);
+    color: white;
+    height: 60px;
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    font-size: 1.3rem;
+    text-decoration: none;
+}
