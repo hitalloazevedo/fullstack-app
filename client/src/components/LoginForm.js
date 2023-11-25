@@ -7,16 +7,16 @@ export default function LoginForm(props) {
         <>
 
             <form className={style.form} onSubmit={props.onSubmit}>
-                <header className=''>
+                <header className={style.formHeader}>
                     <h2 className=''>Log in</h2>
                 </header>
-                <div className=''>
-                    <div className=''>
-                        <div className=''>
+                <div className={style.formContent}>
+                    <div className={style.inputsArea}>
+                        <div className={style.inputField}>
                             <label htmlFor="email">Email</label>
                             <Input type="email" id="email" name="email" onChange={(e) => props.setEmail(e.target.value)}></Input>
                         </div>
-                        <div className=''>
+                        <div className={style.inputField}>
                             <label htmlFor="password">Password</label>
                             <Input name="password" type="password" id="password" onChange={(e) => props.setPassword(e.target.value)}></Input>
                         </div>

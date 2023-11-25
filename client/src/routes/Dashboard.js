@@ -1,10 +1,12 @@
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import { useNavigate } from 'react-router-dom'
 import jwt from "jsonwebtoken"
+import RenderProducts from "../components/RenderProducts.js"
 
 export default function Dashboard() {
 
     const navigate = useNavigate()
+    const [data, setData] = useState({})
 
     async function populateQuote() {
         const res = await fetch('http://localhost:3333/produtos', {
@@ -15,7 +17,7 @@ export default function Dashboard() {
         })
 
         const data = await res.json()
-        console.log(data)
+        setData(data)
     }
 
     useEffect(() => {
@@ -27,7 +29,7 @@ export default function Dashboard() {
                 localStorage.removeItem('jwt')
                 navigate('/login')
             } else {
-                populateQuote()
+                // populateQuote()
             }
         } else {
             navigate('/login')
@@ -36,5 +38,11 @@ export default function Dashboard() {
 
 
 
-    return <div>Dashboard</div>
+    return (
+        <>
+            <h1>Dashboard</h1>
+
+            <RenderProducts/>
+        </>
+    )
 }
