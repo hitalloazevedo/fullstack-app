@@ -7,6 +7,7 @@ import appRoutes from "./src/routes/appRoutes.js";
 import authMiddleware from "./src/middleware/authMiddleware.js";
 
 const app = express();
+const port = 3333 || process.env.PORT
 const dbURI = "mongodb+srv://azevedohitallo:YjzrM4z7vPEj1AaQ@cluster0.6e2ju8n.mongodb.net/node-auth?retryWrites=true&w=majority";
 
 // middlewares
@@ -48,7 +49,7 @@ app.use(
 // database connection
 mongoose
   .connect(dbURI)
-  .then((result) => app.listen(3333, console.log(`port ${3333}`)))
+  .then((result) => app.listen(3333, console.log(`port ${port}`)))
   .catch((err) => console.log(err));
 
 // routes

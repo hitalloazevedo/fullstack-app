@@ -1,5 +1,7 @@
+const url = 'https://api-bfk4.onrender.com'
+
 async function getProducts() {
-    const res = await fetch('http://localhost:3333/produtos', {
+    const res = await fetch(`${url}/produtos`, {
         headers: {
             cookies: localStorage.getItem('jwt'),
         },
@@ -7,6 +9,7 @@ async function getProducts() {
         })
 
     const body = await res.json()
+    console.log(body)
     return body
 }
 

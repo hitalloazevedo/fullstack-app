@@ -1,5 +1,7 @@
+const url = 'https://api-bfk4.onrender.com'
+
 const editProduct = async (cod, description, size, id) => {
-    const response = await fetch(`http://localhost:3333/editar/${id}`, {
+    const response = await fetch(`${url}/editar/${id}`, {
         method: 'POST',
         headers: {'Content-Type': 'application/json',
                     'cookies': localStorage.getItem('jwt')},

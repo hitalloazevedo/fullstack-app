@@ -1,5 +1,7 @@
+const url = 'https://api-bfk4.onrender.com'
+
 const addProduct = async (id, description, size) => {
-    const response = await fetch(`http://localhost:3333/cadastrar`, {
+    const response = await fetch(`${url}/cadastrar`, {
         method: 'POST',
         headers: {'Content-Type': 'application/json',
                     'cookies': localStorage.getItem('jwt')},

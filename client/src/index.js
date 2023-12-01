@@ -10,7 +10,7 @@ import Cadastrar from './routes/Cadastrar'
 
 const router = createBrowserRouter([
     {
-        path: '/',
+        path: '/frontend-react',
         element: <Home/>
     },
     {

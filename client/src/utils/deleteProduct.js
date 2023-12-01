@@ -1,5 +1,7 @@
+const url = 'https://api-bfk4.onrender.com'
+
 const deleteProduct = async (id) => {
-    const response = await fetch(`http://localhost:3333/deletar/${id}`, {
+    const response = await fetch(`${url}/deletar/${id}`, {
         method: 'DELETE',
         headers: {
             cookies: localStorage.getItem('jwt'),
