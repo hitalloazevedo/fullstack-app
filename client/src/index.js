@@ -5,6 +5,8 @@ import Home from './routes/Home';
 import Login from './routes/Login';
 import Dashbord from './routes/Dashboard'
 import Logout from './routes/Logout';
+import Edit from './routes/Edit';
+import Cadastrar from './routes/Cadastrar'
 
 const router = createBrowserRouter([
     {
@@ -22,6 +24,14 @@ const router = createBrowserRouter([
     {
         path: '/logout',
         element: <Logout/>
+    },
+    {
+        path: '/editar',
+        element: <Edit/>
+    },
+    {
+        path: '/cadastrar',
+        element: <Cadastrar/>
     },
 ])
 

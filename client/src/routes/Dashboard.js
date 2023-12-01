@@ -1,40 +1,31 @@
 import { useEffect } from "react"
 import { useNavigate } from 'react-router-dom'
 import jwt from "jsonwebtoken"
+import RenderProducts from "../components/RenderProducts.js"
 
 export default function Dashboard() {
 
     const navigate = useNavigate()
 
-    async function populateQuote() {
-        const res = await fetch('http://localhost:3333/produtos', {
-            headers: {
-                cookies: localStorage.getItem('jwt'),
-            },
-            credentials: 'include'
-        })
-
-        const data = await res.json()
-        console.log(data)
-    }
-
     useEffect(() => {
         const token = localStorage.getItem('jwt')
-        console.log(token)
-        if (token) {
+        if (!token) {
+            navigate('/login')
+        } else {
             const user = jwt.decode(token)
+            console.log(user)
             if (!user) {
                 localStorage.removeItem('jwt')
-                navigate('/login')
-            } else {
-                populateQuote()
+                navigate('/login')    
             }
-        } else {
-            navigate('/login')
         }
     },[navigate])
 
+    return (
+        <>
+            <h1>Dashboard</h1>
 
-
-    return <div>Dashboard</div>
+            <RenderProducts/>
+        </>
+    )
 }

@@ -26,7 +26,7 @@ export default function Login() {
             localStorage.setItem('jwt', data.jwt)
             navigate('/dashboard')
         } else {
-            console.log('error')
+            console.log(data)
         }
     }
 
