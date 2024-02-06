@@ -1,70 +1,89 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Controle de Produtos
 
-## Available Scripts
+Um projeto desenvolvido com o intuito de colocar em prática meus conhecimento, atendendo necessidades de controle de produtos.
 
-In the project directory, you can run:
 
-### `npm start`
+## Tecnologias
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+**Client:** React, CssModules
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+**Server:** Node, Express, JWTauth, MongoDB, PostgresSQL
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Variáveis de Ambiente
 
-### `npm run build`
+Para executar o server, é necessário a configuração das variaveis de ambiente, `.env`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+`SUPABASE_URL`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+`SUPABASE_KEY`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+`JWT_SECRET`
 
-### `npm run eject`
+`MONGODB_URI`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Executando Localmente
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Clone o projeto
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+  git clone https://github.com/hitalloazevedo/fullstack-app
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Vá para o diretório
 
-## Learn More
+```bash
+  cd fullstack-app
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Iniciando o Servidor
+```bash
+  cd server
+```
+```bash
+  npm install
+```
+```bash
+  npm start
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Iniciando o Client
+```bash
+  cd client
+```
+```bash
+  npm install
+```
+```bash
+  npm run start
+```
 
-### Code Splitting
+## Observações
+Para que o projeto seja executado sem problemas, é necessário configurar os bancos de dados de users e dos produtos.
+### Produtos (Supabase)
+Crie uma tabela "produtos" 
+```
+| cod       | description | size |
+| :-------- | :---------- | :----|
+|   int2    |     text    | text |
+```
+### Users (MongoDb)
+Crie uma tabela "node-auth" com uma collection "users".
+Configure a variável de ambiente `MONGODB_URI` com a string de conexão.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Screenshots
 
-### Making a Progressive Web App
+![App Screenshot](https://i.pinimg.com/736x/db/ce/27/dbce27bfe58eb71066d413dd3d25fe01.jpg)
+![App Screenshot](https://i.pinimg.com/736x/c0/a4/6a/c0a46a781a9135d460ce217c49ff142a.jpg)
+![App Screenshot](https://i.pinimg.com/736x/52/54/53/52545342ff644ad2b0ba62e68b44ea4a.jpg)
+![App Screenshot](https://i.pinimg.com/736x/21/1d/01/211d01ee0dc789bf9210a979aaf252e1.jpg)
+![App Screenshot](https://i.pinimg.com/736x/08/8e/59/088e594507aefad9434801ab00c55bc4.jpg)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
+## Authors
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- [@Hitallo Azevedo](https://www.github.com/hitalloazevedo)
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
