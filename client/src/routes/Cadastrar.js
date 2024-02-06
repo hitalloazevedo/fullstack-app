@@ -2,7 +2,8 @@ import addProduct from "../utils/addProduct"
 import { useState, useEffect } from "react"
 import { useNavigate } from "react-router"
 import jwt from 'jsonwebtoken'
-
+import Header from "../components/Header"
+import Form from "../components/Form"
 
 export default function Cadastrar() {
 
@@ -50,20 +51,8 @@ export default function Cadastrar() {
 
     return (
         <>
-            <form id="new-item-form" onSubmit={async (e) => await submit(e)}>
-                <h2>Cadastrar Produto</h2>
-                <div className="input-field">
-                    <label htmlFor="codeInput">Código</label>
-                    <input onChange={(e) => handle(e)} type="number" id="codeInput"/>
-                    <label htmlFor="descriptionInput">Descrição</label>
-                    <input onChange={(e) => handle(e)} type="text" id="descriptionInput"/>
-                    <label htmlFor="sizeInput">Tamanho</label>
-                    <input onChange={(e) => handle(e)} type="text" id="sizeInput"/>
-                </div>
-                <div className="button-field">
-                    <input type="submit" id="btnSend" value="Cadastrar"/>
-                </div>
-            </form>
+            <Header></Header>
+            <Form title='Cadastrar Novo Produto' type='Cadastrar' funcHandle={handle} funcSubmit={submit}></Form>
         </>
     )
 }

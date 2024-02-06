@@ -5,6 +5,7 @@ import getProducts from "../utils/getProducts"
 import newProduct from '../utils/newProduct'
 import { useNavigate } from "react-router"
 import jwt from 'jsonwebtoken'
+import style from '../assets/css/RenderProducts.module.css'
 
 export default function RenderProducts() {
 
@@ -18,7 +19,7 @@ export default function RenderProducts() {
             const user = jwt.decode(token)
             console.log(user)
 
-            const display = document.querySelector('.display')
+            const display = document.querySelector('#display')
         
             getProducts().then(products => {
                 render(products, display, newProduct)
@@ -41,7 +42,7 @@ export default function RenderProducts() {
                     } 
                     else {
                         if (e.target.classList.contains('botao-simples--editar')) {
-                            window.location.href = `../editar?id=${id}`
+                            navigate(`/editar?id=${id}`)
                         }
                 }
             })
@@ -55,16 +56,16 @@ export default function RenderProducts() {
 
     return (
         <>
-            <table>
-                <thead>
-                    <tr>
-                        <td>Cod.</td>
-                        <td>Descrição</td>
-                        <td>Tamanho</td>
-                        <td>Ação</td>
+            <table className={style.table}>
+                <thead className={style.thead}>
+                    <tr className={style.tr}>
+                        <td className={style.td} data-num>Cod.</td>
+                        <td className={style.td} data-des>Descrição</td>
+                        <td className={style.td} data-siz>Tamanho</td>
+                        <td className={style.td} data-act>Ação</td>
                     </tr>
                 </thead>
-                <tbody className="display">
+                <tbody id="display" className={style.display}>
                 </tbody>
             </table>
         </>

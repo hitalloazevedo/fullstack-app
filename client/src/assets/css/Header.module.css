@@ -1,0 +1,44 @@
+.header {
+    background-color: rgb(119, 175, 73);
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 80px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.308);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.headercontent {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.headertitle {
+    color:rgb(255, 255, 255);
+    font-size: 1.5rem;
+}
+
+.ul {
+    display: flex;
+    gap: 50px;
+}
+
+.li {
+    display: inline-block;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.li a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+.headertitle {
+    font-size: 2rem;
+}

@@ -1,0 +1,74 @@
+.form {
+    background-color: rgb(153, 153, 153);
+    height: 500px;
+    width: 400px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.356);
+}
+
+.formtitle {
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6rem;
+    color: #fff;
+}
+
+.inputsarea {
+    height: 60%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+.inputfield {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    width: 90%;
+    height: 70px;
+}
+
+.inputfield label{
+    color: #fff;
+    font-size: 1.1rem;
+    text-indent: 5px;
+}
+
+.input {
+    width: 100%;
+    height: 40px;
+    border-radius: 15px;
+    border: 1px solid gray;
+    outline: none;
+    padding: 0 10px;
+    font-size: 1.2rem;
+    box-sizing: border-box;
+}
+
+.btnfield {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    background-color: rgba(250, 235, 215, 0.014);
+    height: 20%;
+}
+
+.btnsend {
+    background-color: rgb(72, 133, 82);
+    border: 1px solid green;
+    height: 40px;
+    width: 150px;
+    border-radius: 15px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: .5s;
+}
+
+.btnsend:hover {
+    background-color: rgb(51, 100, 59);
+}

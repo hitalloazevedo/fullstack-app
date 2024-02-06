@@ -8,7 +8,7 @@ import authMiddleware from "./src/middleware/authMiddleware.js";
 
 const app = express();
 const port = 3333 || process.env.PORT
-const dbURI = "mongodb+srv://azevedohitallo:YjzrM4z7vPEj1AaQ@cluster0.6e2ju8n.mongodb.net/node-auth?retryWrites=true&w=majority";
+const dbURI = process.env.MONGODB_URI;
 
 // middlewares
 app.use(express.json());

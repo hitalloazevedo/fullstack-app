@@ -1,5 +1,5 @@
 .submitButton {
-    background-color: rgb(231, 235, 24);
+    background-color: rgb(162, 247, 93);
     height: 60px;
     width: 90%;
     border-radius: 25px;
@@ -7,4 +7,9 @@
 
     font-size: 1.5rem;
     font-weight: 600;
+    transition: .5s;
+}
+
+.submitButton:hover {
+    background-color: rgb(119, 168, 78);
 }

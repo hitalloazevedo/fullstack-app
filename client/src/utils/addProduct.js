@@ -1,4 +1,5 @@
-const url = 'https://api-bfk4.onrender.com'
+import { URL } from "../api-url"
+const url = URL
 
 const addProduct = async (id, description, size) => {
     const response = await fetch(`${url}/cadastrar`, {

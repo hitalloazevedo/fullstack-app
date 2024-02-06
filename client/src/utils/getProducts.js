@@ -1,4 +1,5 @@
-const url = 'https://api-bfk4.onrender.com'
+import { URL } from "../api-url"
+const url = URL
 
 async function getProducts() {
     const res = await fetch(`${url}/produtos`, {
@@ -9,7 +10,6 @@ async function getProducts() {
         })
 
     const body = await res.json()
-    console.log(body)
     return body
 }
 

@@ -1,10 +1,10 @@
 .form {
-    background-color: rgb(60, 135, 221);
+    background-color: rgb(83, 83, 83);
     width: 500px;
-    height: 600px;
+    height: 500px;
     margin: auto;
-
-    border-radius: 15px;
+    transform: translateY(20%);
+    border-radius: 20px;
 }
 
 .formHeader {
@@ -12,9 +12,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 12%;
+    height: 20%;
     font-size: 1.5rem;
-    text-align: center;
+    text-align: center; 
 }
 
 .formContent {
@@ -22,7 +22,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 88%;
+    height: 80%;
 }
 
 .inputsArea {
@@ -54,6 +54,8 @@
     outline: none;
     border: none;
     font-size: 1.5rem;
+    padding: 0 20px;
+    box-sizing: border-box;
 }
 
 .sendButtonArea {

@@ -5,7 +5,6 @@ import style from '../assets/css/LoginForm.module.css'
 export default function LoginForm(props) {
     return (
         <>
-
             <form className={style.form} onSubmit={props.onSubmit}>
                 <header className={style.formHeader}>
                     <h2 className=''>Log in</h2>

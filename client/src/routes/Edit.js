@@ -4,14 +4,18 @@ import editProduct from "../utils/editProduct"
 import LoadData from "../utils/loadData"
 import { useNavigate } from "react-router"
 import jwt from 'jsonwebtoken'
+import Header from "../components/Header"
+import Form from "../components/Form"
 
 export default function Edit() {
     const url = new URL(window.location.href)
     const id = url.searchParams.get('id')
-    
+
     const navigate = useNavigate()
+    const [itemId, setItemId] = useState(null)
 
     useEffect(() => {
+        setItemId(id)
         const token = localStorage.getItem('jwt')
         if (!token) {
             navigate('/login')
@@ -23,25 +27,21 @@ export default function Edit() {
                 navigate('/login')    
             }
 
-            window.addEventListener('load', async () => {
-                const codField = document.querySelector('#codeInput')
-                const descriptionField = document.querySelector('#descriptionInput')
-                const sizeField = document.querySelector('#sizeInput')
-                loadInputContent(codField, descriptionField, sizeField, id)
+            const codField = document.querySelector('#codeInput')
+            const descriptionField = document.querySelector('#descriptionInput')
+            const sizeField = document.querySelector('#sizeInput')
+            loadInputContent(codField, descriptionField, sizeField, itemId)
 
-                const res = await LoadData(id)
-                console.log(res)
-
+            LoadData(id).then(res => {
                 const resData = {
                             codeInput: res.cod,
                             descriptionInput: res.description,
                             sizeInput: res.size
                 }
-
                 setData(resData)
             })
         }
-    }, [navigate, id])
+    }, [navigate, itemId])
 
     const [data, setData] = useState({
         codeInput: '',
@@ -51,7 +51,7 @@ export default function Edit() {
 
     function submit(e, id) {
         e.preventDefault()
-        editProduct(data.codeInput, data.descriptionInput, data.sizeInput, id)
+        editProduct(data.codeInput, data.descriptionInput, data.sizeInput, itemId)
     }
 
     function handle(e) {
@@ -60,32 +60,10 @@ export default function Edit() {
         setData(newData)
     }
 
-    // window.addEventListener('load', async () => {
-    //     const res = await LoadData(id)
-    //     const resData = {
-    //             codeInput: res.cod,
-    //             descriptionInput: res.description,
-    //             sizeInput: res.size
-    //     }
-    //     setData(resData)
-    // })
-
     return (
-        <>
-            <form id="new-item-form" onSubmit={async (e) => await submit(e, id)}>
-                <h2>Editar Produto</h2>
-                <div className="input-field">
-                    <label htmlFor="codeInput">Código</label>
-                    <input onChange={(e) => handle(e)} type="number" id="codeInput"/>
-                    <label htmlFor="descriptionInput">Descrição</label>
-                    <input onChange={(e) => handle(e)} type="text" id="descriptionInput"/>
-                    <label htmlFor="sizeInput">Tamanho</label>
-                    <input onChange={(e) => handle(e)} type="text" id="sizeInput"/>
-                </div>
-                <div className="button-field">
-                    <input type="submit" id="btnSend" value="Editar"/>
-                </div>
-            </form>
+        <>  
+            <Header></Header>
+            <Form title='Editar Produto' type='Editar' funcHandle={handle} funcSubmit={submit}></Form>
         </>
     )
 }

@@ -7,10 +7,12 @@ import Dashbord from './routes/Dashboard'
 import Logout from './routes/Logout';
 import Edit from './routes/Edit';
 import Cadastrar from './routes/Cadastrar'
+import Header from './components/Header';
+import './globals.css'
 
 const router = createBrowserRouter([
     {
-        path: '/frontend-react',
+        path: '/',
         element: <Home/>
     },
     {
@@ -37,7 +39,7 @@ const router = createBrowserRouter([
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <>
+    <>  
         <RouterProvider router={router}></RouterProvider>
     </>
 );
