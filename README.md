@@ -9,6 +9,16 @@ Um projeto desenvolvido com o intuito de colocar em prática meus conhecimento, 
 **Client:** React, CssModules
 
 **Server:** Node, Express, JWTauth, MongoDB, PostgresSQL
+<div style="display: inline_block"><br>
+  <img align="center" height="40" width="50" src="https://cdn.worldvectorlogo.com/logos/react-1.svg">
+  <img align="center" height="40" width="50" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg">
+  <img align="center" height="40" width="50" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg">
+  <img align="center" height="40" width="50" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg">
+  <img align="center" height="40" width="40" src="https://static-00.iconduck.com/assets.00/node-js-icon-1901x2048-mk1e13df.png">
+  <img align="center" height="40" width="40" src="https://cdn.worldvectorlogo.com/logos/jwt-3.svg">
+  <img align="center" height="40" width="40" src="https://w7.pngwing.com/pngs/956/695/png-transparent-mongodb-original-wordmark-logo-icon-thumbnail.png">
+  <img align="center" height="40" width="40" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/640px-Postgresql_elephant.svg.png">
+</div>
 
 
 ## Variáveis de Ambiente
