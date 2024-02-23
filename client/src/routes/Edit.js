@@ -41,7 +41,7 @@ export default function Edit() {
                 setData(resData)
             })
         }
-    }, [navigate, itemId])
+    }, [navigate, itemId, id])
 
     const [data, setData] = useState({
         codeInput: '',

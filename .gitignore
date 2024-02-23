@@ -6,6 +6,7 @@
 /.pnp
 .pnp.js
 /.cache
+/client/build/
 
 # testing
 /coverage

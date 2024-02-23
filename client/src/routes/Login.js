@@ -4,7 +4,9 @@ import { useNavigate } from 'react-router'
 import Header from '../components/Header'
 import style from '../assets/css/login.module.css'
 
-const url = 'https://api-bfk4.onrender.com'
+import dotenv from 'dotenv'
+dotenv.config()
+const url = process.env.REACT_APP_API_URL
 
 export default function Login() {
     const [email, setEmail] = useState('')

@@ -1,5 +1,6 @@
-import { URL } from "../api-url"
-const url = URL
+import dotenv from 'dotenv'
+dotenv.config()
+const url = process.env.REACT_APP_API_URL
 
 const deleteProduct = async (id) => {
     const response = await fetch(`${url}/deletar/${id}`, {

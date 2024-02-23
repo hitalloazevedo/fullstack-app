@@ -4,7 +4,7 @@ async function loadData(id){
     const data = await getProducts()
     let obj = {}
     data.forEach(element => {
-        if (element.cod == id) {
+        if (element.cod === id) {
             obj = element
         }
     });

@@ -35,7 +35,7 @@ export default function RenderProducts() {
                     const res = await deleteProduct(id)
                     console.log(res)
                     
-                    if (res.message == 'deleted!') {
+                    if (res.message === 'deleted!') {
                             row.remove()
                             window.alert('Produto deletado com sucesso!')
                         }

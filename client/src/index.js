@@ -7,7 +7,6 @@ import Dashbord from './routes/Dashboard'
 import Logout from './routes/Logout';
 import Edit from './routes/Edit';
 import Cadastrar from './routes/Cadastrar'
-import Header from './components/Header';
 import './globals.css'
 
 const router = createBrowserRouter([
