@@ -17,7 +17,6 @@ export default function RenderProducts() {
             navigate('/login')
         } else {
             const user = jwt.decode(token)
-            console.log(user)
 
             const display = document.querySelector('#display')
         
@@ -33,8 +32,7 @@ export default function RenderProducts() {
                 
                 if (e.target.classList.contains('botao-simples--excluir')) {
                     const res = await deleteProduct(id)
-                    console.log(res)
-                    
+
                     if (res.message === 'deleted!') {
                             row.remove()
                             window.alert('Produto deletado com sucesso!')

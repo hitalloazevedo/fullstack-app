@@ -6,7 +6,7 @@ export default function Dashboard() {
     return (
         <>
             <Header></Header>
-            <div class="main">
+            <div className="main">
                 <h1 className="title">Dashboard</h1>
                 <RenderProducts/>
             </div>

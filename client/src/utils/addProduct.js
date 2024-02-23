@@ -1,5 +1,3 @@
-import dotenv from 'dotenv'
-dotenv.config()
 const url = process.env.REACT_APP_API_URL
 
 const addProduct = async (id, description, size) => {

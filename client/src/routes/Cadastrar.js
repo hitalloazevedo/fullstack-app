@@ -15,7 +15,6 @@ export default function Cadastrar() {
             navigate('/login')
         } else {
             const user = jwt.decode(token)
-            console.log(user)
             if (!user) {
                 localStorage.removeItem('jwt')
                 navigate('/login')    
@@ -38,7 +37,6 @@ export default function Cadastrar() {
     async function submit(e) {
         e.preventDefault()
         const res = await addProduct(data.codeInput, data.descriptionInput, data.sizeInput)
-        console.log(res)
 
         if (res?.code === '23505') {
             window.alert('produto já cadastrado')

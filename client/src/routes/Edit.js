@@ -21,7 +21,6 @@ export default function Edit() {
             navigate('/login')
         } else {
             const user = jwt.decode(token)
-            console.log(user)
             if (!user) {
                 localStorage.removeItem('jwt')
                 navigate('/login')    
